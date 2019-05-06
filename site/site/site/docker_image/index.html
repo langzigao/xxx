@@ -1,0 +1,883 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>docker镜像 - Docs_lzg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Docs_lzg" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Docs_lzg
+              </span>
+              <span class="md-header-nav__topic">
+                docker镜像
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Docs_lzg" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Docs_lzg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      自动化测试原则与规范
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        自动化测试原则与规范
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs_test/auto_test_principle/" title="自动化开发规范" class="md-nav__link">
+      自动化开发规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs_test/bug_principle/" title="BUG规范" class="md-nav__link">
+      BUG规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs_test/case_principle/" title="CASE规范" class="md-nav__link">
+      CASE规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker简介" class="md-nav__link">
+      docker简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        docker镜像
+      </label>
+    
+    <a href="./" title="docker镜像" class="md-nav__link md-nav__link--active">
+      docker镜像
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="获取镜像" class="md-nav__link">
+    获取镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="列出镜像（列出部分镜像、以特定格式显示）" class="md-nav__link">
+    列出镜像（列出部分镜像、以特定格式显示）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="查看镜像、容器、数据卷所占用的空间" class="md-nav__link">
+    查看镜像、容器、数据卷所占用的空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="删除本地镜像" class="md-nav__link">
+    删除本地镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="查看镜像内的历史记录" class="md-nav__link">
+    查看镜像内的历史记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from" title="FROM 指定基础镜像" class="md-nav__link">
+    FROM 指定基础镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="RUN 执行命令" class="md-nav__link">
+    RUN 执行命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="镜像构建" class="md-nav__link">
+    镜像构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-repo" title="直接用 Git repo 进行构建" class="md-nav__link">
+    直接用 Git repo 进行构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" title="用给定的 tar 压缩包构建" class="md-nav__link">
+    用给定的 tar 压缩包构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy" title="COPY 复制文件" class="md-nav__link">
+    COPY 复制文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmd" title="CMD 容器启动命令" class="md-nav__link">
+    CMD 容器启动命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrypoint" title="ENTRYPOINT 入口点" class="md-nav__link">
+    ENTRYPOINT 入口点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env" title="ENV 设置环境变量" class="md-nav__link">
+    ENV 设置环境变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arg" title="ARG 构建参数" class="md-nav__link">
+    ARG 构建参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume" title="VOLUME 定义匿名卷" class="md-nav__link">
+    VOLUME 定义匿名卷
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expose" title="EXPOSE 声明端口" class="md-nav__link">
+    EXPOSE 声明端口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workdir" title="WORKDIR 指定工作目录" class="md-nav__link">
+    WORKDIR 指定工作目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="USER 指定当前用户" class="md-nav__link">
+    USER 指定当前用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthcheck" title="HEALTHCHECK 健康检查" class="md-nav__link">
+    HEALTHCHECK 健康检查
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onbuild" title="ONBUILD 为他人做嫁衣裳" class="md-nav__link">
+    ONBUILD 为他人做嫁衣裳
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../monitor/" title="Monitor" class="md-nav__link">
+      Monitor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="获取镜像" class="md-nav__link">
+    获取镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="列出镜像（列出部分镜像、以特定格式显示）" class="md-nav__link">
+    列出镜像（列出部分镜像、以特定格式显示）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="查看镜像、容器、数据卷所占用的空间" class="md-nav__link">
+    查看镜像、容器、数据卷所占用的空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="删除本地镜像" class="md-nav__link">
+    删除本地镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="查看镜像内的历史记录" class="md-nav__link">
+    查看镜像内的历史记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from" title="FROM 指定基础镜像" class="md-nav__link">
+    FROM 指定基础镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" title="RUN 执行命令" class="md-nav__link">
+    RUN 执行命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="镜像构建" class="md-nav__link">
+    镜像构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-repo" title="直接用 Git repo 进行构建" class="md-nav__link">
+    直接用 Git repo 进行构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" title="用给定的 tar 压缩包构建" class="md-nav__link">
+    用给定的 tar 压缩包构建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy" title="COPY 复制文件" class="md-nav__link">
+    COPY 复制文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmd" title="CMD 容器启动命令" class="md-nav__link">
+    CMD 容器启动命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrypoint" title="ENTRYPOINT 入口点" class="md-nav__link">
+    ENTRYPOINT 入口点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env" title="ENV 设置环境变量" class="md-nav__link">
+    ENV 设置环境变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arg" title="ARG 构建参数" class="md-nav__link">
+    ARG 构建参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume" title="VOLUME 定义匿名卷" class="md-nav__link">
+    VOLUME 定义匿名卷
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expose" title="EXPOSE 声明端口" class="md-nav__link">
+    EXPOSE 声明端口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workdir" title="WORKDIR 指定工作目录" class="md-nav__link">
+    WORKDIR 指定工作目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="USER 指定当前用户" class="md-nav__link">
+    USER 指定当前用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthcheck" title="HEALTHCHECK 健康检查" class="md-nav__link">
+    HEALTHCHECK 健康检查
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onbuild" title="ONBUILD 为他人做嫁衣裳" class="md-nav__link">
+    ONBUILD 为他人做嫁衣裳
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>docker镜像</h1>
+                
+                <h5 id="_1">获取镜像<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker Registry 地址[:端口号]/]仓库名[:标签]
+</pre></div>
+
+<h5 id="_2">列出镜像（列出部分镜像、以特定格式显示）<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker image ls
+</pre></div>
+
+<h5 id="_3">查看镜像、容器、数据卷所占用的空间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker system df
+</pre></div>
+
+<h5 id="_4">删除本地镜像<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
+</pre></div>
+
+<h5 id="_5">查看镜像内的历史记录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker history
+</pre></div>
+
+<h5 id="from">FROM 指定基础镜像<a class="headerlink" href="#from" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。</p>
+</blockquote>
+<h5 id="run">RUN 执行命令<a class="headerlink" href="#run" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>RUN &lt;命令&gt;
+</pre></div>
+
+<blockquote>
+<p>一个目的一个RUN</p>
+<p>每一层构建的最后一定要
+清理掉无关文件。</p>
+</blockquote>
+<h5 id="_6">镜像构建<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker build [选项] &lt;上下文路径/URL/-&gt;
+</pre></div>
+
+<blockquote>
+<p>docker build 命令会将该目录（上下文路径）下的内容打包交给 Docker 引擎以帮助构建镜像。</p>
+<p>一般大家习惯性的会使用默认的文件名 Dockerfile ，以及会将其置于镜像构建上下文目录中</p>
+<p>也可以用 -f ../Dockerfile.php 参数指定某个文件作为
+Dockerfile </p>
+</blockquote>
+<h5 id="git-repo">直接用 Git repo 进行构建<a class="headerlink" href="#git-repo" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker build https://github.com/twang2218/gitlab-ce-zh.git
+</pre></div>
+
+<h5 id="tar">用给定的 tar 压缩包构建<a class="headerlink" href="#tar" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker build http://server/context.tar.gz
+</pre></div>
+
+<blockquote>
+<p>那么 Docker 引擎会下载这个包，并自动解压缩，以其作为上下文，开始构建。</p>
+</blockquote>
+<h5 id="copy">COPY 复制文件<a class="headerlink" href="#copy" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>COPY &lt;源路径&gt;... &lt;目标路径&gt;
+COPY package.json /usr/src/app/
+</pre></div>
+
+<blockquote>
+<p>通配符规则要满足 Go 的 filepath.Match 规
+则</p>
+<p>COPY 和 ADD 指令中选择的时候，可以遵循这样的原则，所有的文件复制均使用COPY指令，仅在需要自动解压缩的场合使用 ADD </p>
+<p>尽可能的使用 COPY</p>
+</blockquote>
+<h5 id="cmd">CMD 容器启动命令<a class="headerlink" href="#cmd" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>CMD [&quot;可执行文件&quot;, &quot;参数1&quot;, &quot;参数2&quot;...]
+</pre></div>
+
+<blockquote>
+<p>在指令格式上，一般推荐使用 exec 格式</p>
+</blockquote>
+<h5 id="entrypoint">ENTRYPOINT 入口点<a class="headerlink" href="#entrypoint" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>在指定容器启动程序及参数</p>
+</blockquote>
+<h5 id="env">ENV 设置环境变量<a class="headerlink" href="#env" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>ENV &lt;key&gt; &lt;value&gt;
+</pre></div>
+
+<h5 id="arg">ARG 构建参数<a class="headerlink" href="#arg" title="Permanent link">&para;</a></h5>
+<h5 id="volume">VOLUME 定义匿名卷<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>docker run -d -v mydata:/data xxxx
+</pre></div>
+
+<h5 id="expose">EXPOSE 声明端口<a class="headerlink" href="#expose" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>EXPOSE &lt;端口1&gt; [&lt;端口2&gt;...]
+</pre></div>
+
+<blockquote>
+<p>EXPOSE 仅仅是声明容器打算使用什么端口</p>
+</blockquote>
+<h5 id="workdir">WORKDIR 指定工作目录<a class="headerlink" href="#workdir" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>WORKDIR &lt;工作目录路径&gt;
+</pre></div>
+
+<blockquote>
+<p>以后各层的当前目录就被改为指定的目录</p>
+</blockquote>
+<h5 id="user">USER 指定当前用户<a class="headerlink" href="#user" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>USER &lt;用户名&gt;
+</pre></div>
+
+<blockquote>
+<p>改变之后层的执行 RUN , CMD 以及 ENTRYPOINT 这类命令的身份。</p>
+<p>如果以 root 执行的脚本，建议使用 gosu</p>
+</blockquote>
+<h5 id="healthcheck">HEALTHCHECK 健康检查<a class="headerlink" href="#healthcheck" title="Permanent link">&para;</a></h5>
+<h5 id="onbuild">ONBUILD 为他人做嫁衣裳<a class="headerlink" href="#onbuild" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>在当前镜像构建时并不会被执行。只有当以当前镜像为基础镜像，去构建下一级镜像的时候
+才会被执行。</p>
+</blockquote>
+<h5 id="_7">注意<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>Docker v17.05 开始支持多阶段构建</p>
+<p>CentOS/RHEL 用户在没有办法使用 UnionFS 的情况下，一定要配置
+direct-lvm 给 devicemapper ，无论是为了性能、稳定性还是空间利用率。</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../docker/" title="docker简介" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                docker简介
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../monitor/" title="Monitor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Monitor
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

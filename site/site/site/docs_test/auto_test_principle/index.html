@@ -1,0 +1,984 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>自动化开发规范 - Docs_lzg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Docs_lzg" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Docs_lzg
+              </span>
+              <span class="md-header-nav__topic">
+                自动化开发规范
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Docs_lzg" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Docs_lzg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      自动化测试原则与规范
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        自动化测试原则与规范
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        自动化开发规范
+      </label>
+    
+    <a href="./" title="自动化开发规范" class="md-nav__link md-nav__link--active">
+      自动化开发规范
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="自动化编码规范" class="md-nav__link">
+    自动化编码规范
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="正确性" class="md-nav__link">
+    正确性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="功能正确性" class="md-nav__link">
+    功能正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="设计正确性" class="md-nav__link">
+    设计正确性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="复用性" class="md-nav__link">
+    复用性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="可维护性" class="md-nav__link">
+    可维护性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="精确性" class="md-nav__link">
+    精确性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="测试条件精确性" class="md-nav__link">
+    测试条件精确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="检查点精确性" class="md-nav__link">
+    检查点精确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="定位精确性" class="md-nav__link">
+    定位精确性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="效率" class="md-nav__link">
+    效率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="开发效率" class="md-nav__link">
+    开发效率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="可移植性" class="md-nav__link">
+    可移植性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="可读性" class="md-nav__link">
+    可读性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="命名规则" class="md-nav__link">
+    命名规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="数据构造" class="md-nav__link">
+    数据构造
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="增加注释" class="md-nav__link">
+    增加注释
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="书写规范" class="md-nav__link">
+    书写规范
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="其他" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" title="自动化原则" class="md-nav__link">
+    自动化原则
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="必要性" class="md-nav__link">
+    必要性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="无需自动化的模块" class="md-nav__link">
+    无需自动化的模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" title="无需自动化的功能" class="md-nav__link">
+    无需自动化的功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" title="灵活性" class="md-nav__link">
+    灵活性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bug_principle/" title="BUG规范" class="md-nav__link">
+      BUG规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../case_principle/" title="CASE规范" class="md-nav__link">
+      CASE规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker/" title="docker简介" class="md-nav__link">
+      docker简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker_image/" title="docker镜像" class="md-nav__link">
+      docker镜像
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../monitor/" title="Monitor" class="md-nav__link">
+      Monitor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="自动化编码规范" class="md-nav__link">
+    自动化编码规范
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="正确性" class="md-nav__link">
+    正确性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="功能正确性" class="md-nav__link">
+    功能正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="设计正确性" class="md-nav__link">
+    设计正确性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="复用性" class="md-nav__link">
+    复用性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="可维护性" class="md-nav__link">
+    可维护性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="精确性" class="md-nav__link">
+    精确性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="测试条件精确性" class="md-nav__link">
+    测试条件精确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="检查点精确性" class="md-nav__link">
+    检查点精确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="定位精确性" class="md-nav__link">
+    定位精确性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="效率" class="md-nav__link">
+    效率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="开发效率" class="md-nav__link">
+    开发效率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="可移植性" class="md-nav__link">
+    可移植性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="可读性" class="md-nav__link">
+    可读性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="命名规则" class="md-nav__link">
+    命名规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="数据构造" class="md-nav__link">
+    数据构造
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="增加注释" class="md-nav__link">
+    增加注释
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="书写规范" class="md-nav__link">
+    书写规范
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="其他" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" title="自动化原则" class="md-nav__link">
+    自动化原则
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="必要性" class="md-nav__link">
+    必要性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="无需自动化的模块" class="md-nav__link">
+    无需自动化的模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" title="无需自动化的功能" class="md-nav__link">
+    无需自动化的功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" title="灵活性" class="md-nav__link">
+    灵活性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>自动化开发规范</h1>
+                
+                <h3 id="_1">自动化编码规范<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">正确性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>自动化用例首先要保证的就是正确性。</p>
+</blockquote>
+<h5 id="_3">功能正确性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<ul>
+<li>功能正确性可理解为与正确的用例一致，包括测试目的、步骤、结果等。</li>
+<li>目前部分自动化用例存在检查点遗漏的问题，但也不建议所有用例都加上全部检查点，否则会导致用例难以维护和执行时间过长等问题。用例有等级之分，检查点也应有等级之分，同一功能的用例可选择几个用例加上全部检查点，其他用例只加上重要检查点即可，如果把握不好，可加全检查点。</li>
+</ul>
+<p>【例】
+<div class="codehilite"><pre><span></span>pushbill的时间检验规则：展现时间与计费时间间隔过长（大于3600秒，或小于-300秒）即被判为作弊。
+时间间隔为10秒不被该规则过滤、时间间隔为3601秒被过滤、时间间隔为-301秒被过滤自然应该加全检查点（全部日志内容）。
+而时间间隔等于3600秒、-300秒等用例，只检查重要检查点即可，如过滤码是否正确、发送给adm计费内容是否正确、pingback是否正确。
+Smoke、important级别的用例必须加全检查点。
+</pre></div></p>
+<h5 id="_4">设计正确性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>设计正确性可理解为自动化脚本本身不存在bug</p>
+</blockquote>
+<h4 id="_5">复用性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>1)  每个插件函数只需完成较独立、完整的小功能。</p>
+<blockquote>
+<p>即实现插件的“高内聚、低耦合”，通过组合，实现不同的功能，提高插件的复用性。</p>
+</blockquote>
+<p>2)  同一类的操作尽量用统一的方式。</p>
+<blockquote>
+<p>如：恢复环境、日志获取、配置文件处理、进程的起停、各种http请求、各种reload操作等。</p>
+</blockquote>
+<h4 id="_6">可维护性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>1)  插件函数设计需灵活。</p>
+<blockquote>
+<p>尽量不要将数据写死在函数内，可使用参数传递，并赋予默认值，避免大量无意义的赋值操作，提高插件的扩展性，也利于维护。</p>
+</blockquote>
+<p>2)  集中处理易变的业务</p>
+<blockquote>
+<p>将易变的数据、逻辑封装到一个完整的模块中，对外提供低耦合的接口，当业务发生变更的时候，只需要更改相应模块，无需修改其它模块，这也是面象对象设计理念的核心思想。</p>
+<p>插件脚本和用例脚本就是两个大层面上的不同的模块，应该将易变的数据、逻辑封装到插件脚本中，而不是写在用例脚本中。</p>
+</blockquote>
+<h4 id="_7">精确性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h5 id="_8">测试条件精确性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<h5 id="_9">检查点精确性<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<h5 id="_10">定位精确性<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>通过抛出的异常能准确快速定位问题所在，前提是设计用例的检查点必须清晰明确。</p>
+<p>另外我们自动化框架的assert是退出当前用例，因此先后顺序也影响问题定位。</p>
+</blockquote>
+<h4 id="_11">效率<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>随着自动化用例的不断增加，自动化执行时间也不断增大，我们需要在技术和技巧上对程序进行优化以提高执行效率。</p>
+</blockquote>
+<h4 id="_12">开发效率<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>快速开发自动化用例，时间成本是最大的成本。</p>
+</blockquote>
+<h4 id="_13">可移植性<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>由于自动化用例可能需要在不同机器不同目录下运行，因此要有良好的可移植性。</p>
+</blockquote>
+<h4 id="_14">可读性<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h5 id="_15">命名规则<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>意义明确、易于阅读，强调“可扫视”性。</p>
+</blockquote>
+<p>1)  变量名或函数名意义明确，尽量与开发代码中一致，如adid、accid等；或者均以能体显其具体意义的一个或多个英文单词命名，第一个单词小写，从第二个单词开始，单词的首字母大写其它字母小写。如：setFakeAdsAcidFile()，命名风格一致；</p>
+<p>2)  当一个插件函数不为外部用例脚本调用时，需要前后都加上两个下划线，如：<strong>getSFTPObject</strong>、<strong>parseResponse</strong>(rsp)</p>
+<p>3)  目前测试开发提供的模拟器代码中，采用的是一种类似于匈牙利命名法的且更为传统的命名规范。变量、函数、类型都由小写英文单词命名，如果用一个以上的单词来命名时，各单词之间用下划线分隔</p>
+<blockquote>
+<p>a)    指针变量加前缀“p_”，指针的指针加前缀“pp_”</p>
+<p>b)    类型名加后缀“_t”</p>
+<p>c)    全局变量加前缀“g_”</p>
+<p>d)    静态变量加前缀“s_”</p>
+<p>e)    成员变量加前缀“_”</p>
+</blockquote>
+<h5 id="_16">数据构造<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<p>1)  变量值、文件中数据等尽量与实际一致，不要用个人姓名；
+2)  默认参数值尽量使用最常用数据；</p>
+<h5 id="_17">增加注释<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
+<p>1)  用例测试目的；
+2)  主要测试步骤、检查点；
+3)  插件函数主要功能；
+4)  特殊业务逻辑；
+5)  具有一定格式的数据说明；</p>
+<h5 id="_18">书写规范<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<p>1)  缩进</p>
+<blockquote>
+<p>a)    不用空格用tab；</p>
+<p>b)    1个tab在python中默认对应8个空格；</p>
+<p>c)    当空格与tab混用时，极易造成错误；</p>
+</blockquote>
+<p>2)  换行</p>
+<blockquote>
+<p>a)    参数列表、运算符应由空格隔开；</p>
+<p>b)    当一个屏幕显示不下时，一定要换行；</p>
+<p>c)    换行用’\’；</p>
+</blockquote>
+<p>3)  空格</p>
+<blockquote>
+<p>a)    如果字符串中需要有一个tab，应用\t来表示，不要直接输入tab</p>
+<p>b)    去掉多余的空格、tab或其它不可见的字符</p>
+</blockquote>
+<p>4)  适当的对齐</p>
+<blockquote>
+<p>a)    在表达式中做适当的上下对齐</p>
+</blockquote>
+<h4 id="_19">其他<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>1)  尽量使用已有的、流行的库。
+2)  与业务无关的尽量使用公共插件函数。
+3)  每一行代码都应该有其存在的明确的理由，代码应在不违反命名规范和书写规范的前提下，尽量精简。
+4)  失效的用例不要马上删除，避免功能恢复还需重新开发，可以将其注释掉，或移到一个特定文件xxx.case.invalid。
+5)  可以在用例中保留调试信息。
+6)  自动化用例的命名统一，以#CASE_为前缀，这样用grep和wc等命令可以方便的统计用例各数。
+7)  自动化用例中的函数参数很多的时候，用dict作统一包装。
+8)  尽量不改变系统时间，改变系统时间会使测试机上的很多软件业务瘫痪，如最常用的make命令等。</p>
+<h3 id="_20">自动化原则<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<h4 id="_21">必要性<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>一般情况下，正常迭代的模块都要进行自动化，但有些特殊情况下，可以暂不自动化。</p>
+</blockquote>
+<h5 id="_22">无需自动化的模块<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+<p>1)  迭代频率很低（&lt;1次/月）的非核心模块。
+2)  目前技术无法实现自动化或实现成本过高。</p>
+<h5 id="_23">无需自动化的功能<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h5>
+<p>1)  实验性质的临时需求。
+2)  不可控的非业务性需求。</p>
+<blockquote>
+<p>例：需求为修复启动小概率core的bug。
+3)  实现成本过高且不易变更的需求。
+例：模块加载超大数据至内存溢出时打印报</p>
+</blockquote>
+<h4 id="_24">灵活性<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>一般情况下，各个模块均采用常规的功能点级的自动化（python），但特殊情况，可以灵活选用自动化框架及用例设计方式。</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="../bug_principle/" title="BUG规范" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                BUG规范
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

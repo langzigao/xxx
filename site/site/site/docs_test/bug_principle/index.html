@@ -1,0 +1,849 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>BUG规范 - Docs_lzg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#bug" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Docs_lzg" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Docs_lzg
+              </span>
+              <span class="md-header-nav__topic">
+                BUG规范
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Docs_lzg" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Docs_lzg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      自动化测试原则与规范
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        自动化测试原则与规范
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../auto_test_principle/" title="自动化开发规范" class="md-nav__link">
+      自动化开发规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        BUG规范
+      </label>
+    
+    <a href="./" title="BUG规范" class="md-nav__link md-nav__link--active">
+      BUG规范
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug" title="Bug描述" class="md-nav__link">
+    Bug描述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="标题" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_1" title="Bug级别" class="md-nav__link">
+    Bug级别
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="依据影响判定" class="md-nav__link">
+    依据影响判定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="依据功能判定" class="md-nav__link">
+    依据功能判定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="详细说明" class="md-nav__link">
+    详细说明
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="高级" class="md-nav__link">
+    高级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="中级" class="md-nav__link">
+    中级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="低级" class="md-nav__link">
+    低级
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_2" title="Bug修复优先级" class="md-nav__link">
+    Bug修复优先级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_3" title="Bug规范" class="md-nav__link">
+    Bug规范
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug_4" title="BUG提交" class="md-nav__link">
+    BUG提交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_5" title="BUG定位" class="md-nav__link">
+    BUG定位
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_6" title="BUG跟踪" class="md-nav__link">
+    BUG跟踪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_7" title="BUG总结" class="md-nav__link">
+    BUG总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../case_principle/" title="CASE规范" class="md-nav__link">
+      CASE规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker/" title="docker简介" class="md-nav__link">
+      docker简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker_image/" title="docker镜像" class="md-nav__link">
+      docker镜像
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../monitor/" title="Monitor" class="md-nav__link">
+      Monitor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bug" title="Bug描述" class="md-nav__link">
+    Bug描述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="标题" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_1" title="Bug级别" class="md-nav__link">
+    Bug级别
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="依据影响判定" class="md-nav__link">
+    依据影响判定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="依据功能判定" class="md-nav__link">
+    依据功能判定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="详细说明" class="md-nav__link">
+    详细说明
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="高级" class="md-nav__link">
+    高级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="中级" class="md-nav__link">
+    中级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="低级" class="md-nav__link">
+    低级
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_2" title="Bug修复优先级" class="md-nav__link">
+    Bug修复优先级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug_3" title="Bug规范" class="md-nav__link">
+    Bug规范
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug_4" title="BUG提交" class="md-nav__link">
+    BUG提交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_5" title="BUG定位" class="md-nav__link">
+    BUG定位
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_6" title="BUG跟踪" class="md-nav__link">
+    BUG跟踪
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug_7" title="BUG总结" class="md-nav__link">
+    BUG总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>BUG规范</h1>
+                
+                <h4 id="bug">Bug描述<a class="headerlink" href="#bug" title="Permanent link">&para;</a></h4>
+<h5 id="_1">标题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
+<p>1)  注明系统或模块名称。
+2)  简要叙述问题现象及影响</p>
+<h5 id="_2">描述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>重现步骤：重现Bug的最小执行步骤。</li>
+<li>结果：Bug导致的结果。</li>
+<li>预期：预期正确的结果。</li>
+<li>分析：Bug产生的原因，建议代码级。</li>
+</ul>
+<h4 id="bug_1">Bug级别<a class="headerlink" href="#bug_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Bug共分为三个级别：高级、中级、低级。</strong></p>
+</blockquote>
+<h5 id="_3">依据影响判定<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>多用于线上系统缺陷等级的判定，主要判断方法如下：</p>
+<blockquote>
+<p>Bug等级 = MAX（影响收入程度，影响客户程度）</p>
+</blockquote>
+<p><img alt="image" src="../imgs/1.jpg" /></p>
+<p>1)  影响收入：包括收入异常减少与收入异常增加。
+总收入指本服务每天的总收入，估算影响时不考虑运营等因素。
+2)  影响客户：包括客户因广告展示异常、消耗波动异常、客户数据异常等产生质疑或投诉。</p>
+<h5 id="_4">依据功能判定<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>多用于线下系统缺陷等级的判定，也可用于线上系统，主要判断方法如下：</p>
+<blockquote>
+<p>Bug等级 = AVG（功能重要性，逻辑重要性，发生概率）</p>
+</blockquote>
+<p><img alt="image" src="../imgs/2.jpg" /></p>
+<p>1)  功能重要性：功能对于该业务的重要程度。如：</p>
+<blockquote>
+<p>a)    主要功能：广告选取、计费功能。</p>
+<p>b)    次要功能：query、日志打印功能。</p>
+</blockquote>
+<p>2)  逻辑重要性：功能的正常处理逻辑与异常处理逻辑。如：</p>
+<blockquote>
+<p>a)    主要逻辑：正常广告选取逻辑。</p>
+<p>b)    次要逻辑：异常广告选取逻辑，如广告相应客户id不存在。</p>
+</blockquote>
+<p>3)  发生概率：缺陷所依赖场景出现的可能性。</p>
+<blockquote>
+<p>a)    可通过PV判定法，在BUG处加日志，打一段时间请求，BUG日志/PV日志即为概率。</p>
+</blockquote>
+<h4 id="_5">详细说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h5 id="_6">高级<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p>1)  严重影响收入、客户。
+例：</p>
+<blockquote>
+<p>a)    广告选取、排序错误。如：正常广告不展示，下线广告可以展示。</p>
+<p>b)    广告展现样式错误。如：广告未标红、广告页面样式严重变形。</p>
+<p>c)    广告点击跳转、计费错误。如：广告点击不能跳转到客户页面。</p>
+<p>d)    广告入口不可达广告页面。</p>
+</blockquote>
+<p>2)  正常情况下，程序无法提供服务。
+例：</p>
+<blockquote>
+<p>a)    无法正常启动或停止。</p>
+<p>b)    运行中程序崩溃或进程消失。</p>
+<p>c)    进程阻塞，对外无响应，超时严重。</p>
+<p>d)    严重资源（内存、句柄）泄露，运行一天内可导致服务异常。</p>
+</blockquote>
+<p>3)  可间接导致本服务或相关服务发生严重问题。
+例：</p>
+<blockquote>
+<p>a)    服务无应有的故障处理及恢复机制。</p>
+<p>b)    例行reload接口无效。</p>
+<p>c)    error_log（CRITICAL、ERROR）级别打印错误导致不能正确报警或误报。</p>
+<p>d)    核心日志（如：cd¬_ie_log）重要字段打印错误，可导致众多流程错误。</p>
+</blockquote>
+<h5 id="_7">中级<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>1)  高级中的情况仅偶尔发生或程度较轻。
+例：</p>
+<blockquote>
+<p>a)    特定条件下，广告选取、排序、展现样式错误。</p>
+<p>b)    运行中程序偶尔崩溃或进程消失。</p>
+<p>c)    存在资源（内存、句柄）泄露，且不会导致服务异常。</p>
+</blockquote>
+<p>2)  辅助性功能未正确实现。
+例：</p>
+<blockquote>
+<p>a)    非例行reload接口、query接口。</p>
+<p>b)    非核心日志打印，且有一定影响。如：影响性能、导致部分流程错误。</p>
+</blockquote>
+<p>3)  健壮性、兼容性、安全性等缺陷。</p>
+<blockquote>
+<p>例：</p>
+<p>a)    数据文件、配置文件容错。</p>
+<p>b)    Js兼容性。如：广告页面样式仅在IE6下发生变形。</p>
+</blockquote>
+<h5 id="_8">低级<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>1) 中级2、3的情况仅偶尔发生。</p>
+<p>2) UI/UE缺陷，但不会导致客户投诉。</p>
+<p>3) 程序依赖的固化外部数据存在错误。</p>
+<blockquote>
+<p>例：
+a)    ip到区域码对应表。
+</p>
+</blockquote>
+<h4 id="bug_2">Bug修复优先级<a class="headerlink" href="#bug_2" title="Permanent link">&para;</a></h4>
+<p><img alt="image" src="../imgs/3.jpg" /></p>
+<h4 id="bug_3">Bug规范<a class="headerlink" href="#bug_3" title="Permanent link">&para;</a></h4>
+<h5 id="bug_4">BUG提交<a class="headerlink" href="#bug_4" title="Permanent link">&para;</a></h5>
+<p>1) 所有Bug均需提交Cynthia管理。</p>
+<p>2) 提交Bug需描述清晰、准确，级别正确，参考第1、2章，可辅以截图。
+通过代码走读发现的Bug可不写重现步骤。</p>
+<p>3) 提交Bug时要注明是否影响收入/客户、判断的理由及影响范围。</p>
+<h5 id="bug_5">BUG定位<a class="headerlink" href="#bug_5" title="Permanent link">&para;</a></h5>
+<p>1) Bug需要定位至代码级别，如短时间内（10分钟）难以定位，可交由开发定位。Web系统暂不要求。</p>
+<p>2) QA需保留Bug现场（如：log、data、截图），方便RD定位及修复。</p>
+<p>3) 如果Bug存在争议，需要PM、RD、QA及其Leader共同认定。</p>
+<h5 id="bug_6">BUG跟踪<a class="headerlink" href="#bug_6" title="Permanent link">&para;</a></h5>
+<p>1) Bug较多时，QA可要求RD按照修复优先级安排修复Bug，参考第3章。</p>
+<p>2) 如果Bug修复成本很高，QA可适当提升修复优先级。</p>
+<p>3) 如果Bug很严重或影响范围很大，及时公告相关人员。</p>
+<p>4) Bug再次发生时，可将已提交Bug激活。</p>
+<p>5) 提交Bug后应注意跟踪，督促RD尽快修复Bug。</p>
+<p>6) 所有Bug均应在上线前处理完毕，Cynthia状态为“关闭”或“遗留”。</p>
+<p>7) 高级Bug必须要求RD修复，如遗留需要PM、RD、QA、OP二线Leader同时确认。</p>
+<h5 id="bug_7">BUG总结<a class="headerlink" href="#bug_7" title="Permanent link">&para;</a></h5>
+<p>1)  对于有价值的Bug及时进行Bug分享或加入测试潜规则。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../auto_test_principle/" title="自动化开发规范" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                自动化开发规范
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../case_principle/" title="CASE规范" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                CASE规范
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

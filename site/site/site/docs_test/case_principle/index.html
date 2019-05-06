@@ -1,0 +1,823 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>CASE规范 - Docs_lzg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#case" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Docs_lzg" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Docs_lzg
+              </span>
+              <span class="md-header-nav__topic">
+                CASE规范
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Docs_lzg" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Docs_lzg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      自动化测试原则与规范
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        自动化测试原则与规范
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../auto_test_principle/" title="自动化开发规范" class="md-nav__link">
+      自动化开发规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bug_principle/" title="BUG规范" class="md-nav__link">
+      BUG规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CASE规范
+      </label>
+    
+    <a href="./" title="CASE规范" class="md-nav__link md-nav__link--active">
+      CASE规范
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case" title="CASE结构" class="md-nav__link">
+    CASE结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="主要元素" class="md-nav__link">
+    主要元素
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="用例等级" class="md-nav__link">
+    用例等级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="注意事项" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="用例集命名及划分规范" class="md-nav__link">
+    用例集命名及划分规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="用例集结构规范" class="md-nav__link">
+    用例集结构规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="如何对用例集进行说明" class="md-nav__link">
+    如何对用例集进行说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="如何写用例描述" class="md-nav__link">
+    如何写用例描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="关于用例编写过程中的注释" class="md-nav__link">
+    关于用例编写过程中的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" title="关于pep8" class="md-nav__link">
+    关于pep8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker/" title="docker简介" class="md-nav__link">
+      docker简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker_image/" title="docker镜像" class="md-nav__link">
+      docker镜像
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../monitor/" title="Monitor" class="md-nav__link">
+      Monitor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case" title="CASE结构" class="md-nav__link">
+    CASE结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="主要元素" class="md-nav__link">
+    主要元素
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="用例等级" class="md-nav__link">
+    用例等级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="注意事项" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="用例集命名及划分规范" class="md-nav__link">
+    用例集命名及划分规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="用例集结构规范" class="md-nav__link">
+    用例集结构规范
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="如何对用例集进行说明" class="md-nav__link">
+    如何对用例集进行说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="如何写用例描述" class="md-nav__link">
+    如何写用例描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="关于用例编写过程中的注释" class="md-nav__link">
+    关于用例编写过程中的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" title="关于pep8" class="md-nav__link">
+    关于pep8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>CASE规范</h1>
+                
+                <h4 id="case">CASE结构<a class="headerlink" href="#case" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Case结构一般在3-5层，第一层为系统名称，中间层为模块/子模块，最后一层为功能点。</p>
+<p>系统 — 模块/子模块 — 功能</p>
+</blockquote>
+<h4 id="_1">主要元素<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>1)  测试目的
+2)  前提条件
+3)  输入数据
+4)  操作步骤
+5)  预期结果</p>
+<h4 id="_2">用例等级<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p><img alt="image" src="../imgs/1556532903(1).jpg" /></p>
+<p><strong>常见情况</strong>
+1)  主要逻辑
+2)  常见操作
+3)  常见请求
+4)  常见配置</p>
+<p><strong>非常见情况</strong>
+1)  容错性（程序逻辑必须要处理的）
+2)  非常用路径，出现概率较低
+3)  一些只影响界面的影响因素，如分辨率，界面调整。
+4)  操作比较复杂
+5)  非常见状态、数据</p>
+<p><strong>异常情况</strong>
+1)  异常的影响因素
+2)  破坏性操作且发生概率较低
+3)  人为造成
+4)  产品流程中的例外处理一般是Normal级；程序的错误处理一般是Extend级</p>
+<h4 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><strong>1)    冒烟测试额外选取要求</strong></p>
+<p>a)  新加入的功能优先考虑。</p>
+<p>b)  冒烟测试用例不能是大纲性的，必须满足用例的全部要素的，是可执行的。是从用例中选取出来供开发执行的。</p>
+<p>c)  冒烟测试用例只需要在最常见的测试环境中执行，用例中需要定义。</p>
+<p>d)  冒烟测试要让开发能够在2小时内完成。</p>
+<p><strong>2)    冒烟测试提交开发原则</strong></p>
+<p>a)  冒烟测试用例在开发编码完成前提交。</p>
+<p>b)  冒烟测试环境数据由开发自己准备。</p>
+<p>c)  测试计划时间不足3天的，不需要进行冒烟测试。</p>
+<p><strong>3)    判断测试对象是否主要的依据（用于指导执行，不影响用例分级本身）</strong></p>
+<p>a)  是否常用功能</p>
+<p>b)  是否决定收入</p>
+<p>c)  是否决定品质</p>
+<p>d)  是否开发常关注的功能</p>
+<p>e)  是否程序容易出错的地方</p>
+<p>f)  浏览器</p>
+<p>g)  平台</p>
+<p><strong>4)    执行注意事项</strong></p>
+<p>a)  分级只对本次未修改的功能生效，本次修改或新增的功能，原则上所有case都要执行。</p>
+<p>b)  回归过程中，根据测试对象和用例级别确定执行case的级别。</p>
+<p>c)  用例分为4级，不考虑测试对象主次程度的情况下。</p>
+<blockquote>
+<p>i.    Smoke用例在开发提交测试时必须执行。</p>
+<p>ii.   Important用例冻结时或提交时，必须执行。</p>
+<p>iii.  Normal用例在测试过程中至少执行一遍。</p>
+<p>iv.   Extand用例可根据具体情况（时间安排等）确定是否执行。</p>
+<p>v.    项目leader可根据项目具体情况调整以上确定的执行要求。</p>
+</blockquote>
+<p>d)  对于执行有难度的用例尽早汇报。
+如：缺少测试工具、数据难构造、测试结果难检查、场景难模拟、软硬件不具备等等。</p>
+<h4 id="_4">用例集命名及划分规范<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一个用例集就是一个用例文件</li>
+<li>对于每个服务，用例集必须有统一的前缀(用例平台根据统一前缀提取用例)，推荐用“test“或者服务名简写如”bidding“等。</li>
+<li>用例集一般情况以功能逻辑划分，例如testwapfilterblackkwd.py、testwapretrieverandom.py 分别对应了黑词过滤和随机词召回两个功能 。 * 按逻辑划分时，尽量细分，例如testwapfilterblackkwd.py、testwapfilterquery.py，虽然这两个都是过滤相关的用例，但是不要放到一个用例集。</li>
+<li>我们希望用例集的case最好不要过多（小于20？），如果过多则需要进行拆分，例如拆成testwapfilterblackkwd001.py、testwapfilterblackkwd002.py等</li>
+</ul>
+<h4 id="_5">用例集结构规范<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>#coding:GBK
+
+&quot;&quot;&quot;
+kwd_targetting触发逻辑相关用例
+需求:根据用户搜索词进行定向。
+&quot;&quot;&quot;
+
+import sys
+import datetime
+
+class TestCase:
+
+    @classmethod
+    def setup_class(self):
+        pass
+
+    @classmethod
+    def teardown_class(self):
+        pass   
+
+    def setup(self):
+        pass
+
+    def teardown(self):
+        pass
+
+    @attr(&#39;smoke&#39;)
+    def test_001(self):
+        &#39;&#39;&#39;
+
+        &#39;&#39;&#39;
+        pass
+
+    @attr(&#39;smoke&#39;)
+    def test_002(self):
+        &#39;&#39;&#39;
+
+        &#39;&#39;&#39;
+        pass
+</pre></div>
+
+<ul>
+<li>第一部分为编码声明，我们的case无特殊情况都采用gbk编码</li>
+<li>第二部分为用例集的说明，采用三引号方式包含，后文会专门对用例集说明的书写规范做说明</li>
+<li>第三部分为各种import的库</li>
+<li>第四部分为用例的类，一个用例集只需要定义一个类，且该类的名称建议统一为TestCase</li>
+<li>除测试用例外，TestCase类中包含四个函数，分别为setupclass、teardownclass、setup、teardown，具体意义请查阅nosetest文档</li>
+<li>测试用例的命名：统一前缀，建议用test作为前缀，同时建议后面直接接序号 ，如test001、test_002等。测试用例的书写规范后文会详细介绍。</li>
+</ul>
+<h4 id="_6">如何对用例集进行说明<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p><div class="codehilite"><pre><span></span>#coding:GBK
+
+&quot;&quot;&quot;
+直投下载样式
+
+[rb132] 2019-01-23
+------------------------------
+[需求说明]
+目前直投还不能出下载样式，WF需要配合LDS做这部分的打通
+&lt;需求文档链接（如果有）&gt;
+
+[开发说明]
+1. 功能说明
+- 在业务平台上，下载样式和非下载样式均属于小图、三图和大图；
+- 当客户端同时请求多种样式时，先走小图、三图和大图的原有逻辑，相应的下载样式根据配比随机出。、
+- 打底逻辑不变
+2. 代码变更
+http://cr.adtech.sogou-inc.com/D26264
+3. 配置变更
+&lt;此处写清增加的配置项以及配置项作用，可以有多个，例如&gt;
+（1）在某某配置文件增加 xxx，作用xxx功能开关
+（2）...
+4. 数据变更
+&lt;此处写清增加的数据文件、作用、地址等，可以有多个&gt;
+（1）增加文件：data/dicts/crowds_orient_dict
+    - 文件地址：rsync 10.139.17.110::root/search/odin/penglin/LDS/data/dicts/crowds_orient_dict ./data/dicts/ -aP
+    - 格式: 字段1 \t 字段2 \t 字段3 
+（2）.... 
+5. 测试建议
+&lt;开发测试建议&gt;
+6. 其他说明
+&lt;可为空&gt;
+
+[测试说明]
+&lt;本用例svn地址&gt;
+
+[rb131] 2019-01-10
+------------------------------
+[需求说明]
+[开发说明]
+[测试说明]
+
+&quot;&quot;&quot;
+</pre></div>
+- 用例集说明的第一行，用于描述该用例集具体完成哪个功能的测试
+- 用例集的后面几行，具体写一下需求背景，以及该功能的逻辑描述等（个人认为把功能介绍放在用例里，比放到业务文档中更好一些）</p>
+<h4 id="_7">如何写用例描述<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>def test_001(self):
+    &#39;&#39;&#39;
+    验证KT触发策略是否正确
+    前提准备:
+        1.设置三组广告
+        2.kt字典对应1 2 两组报文中的groupid
+        3.proto协议中加入kt字典中对应的关键词返回内容
+    测试步骤及结果验证:
+        1.发送50次请求， 预期结果：触发广告在1 2 两个报文中，trig_type=5
+        2.删除字典，发送50次请求  预期结果：触发reload，返回结果走normal逻辑account_id 对应三组报文，trig_type=0   
+</pre></div>
+
+<ul>
+<li>测试用例描述使用三引号包含，切记不要用#</li>
+<li>用例描述包括几部分：用例测试目的、测试前提准备、测试步骤、以及对应每个步骤的预期结果</li>
+<li>用例描述的第一行，用比较简明的一句话描述出该条用例的测试目的</li>
+<li>后面的数行，写测试用例的前提准备</li>
+<li>再后面写测试步骤，以及对应的预期结果</li>
+</ul>
+<h4 id="_8">关于用例编写过程中的注释<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>def test_001(self):
+    &#39;&#39;&#39;
+    省略...
+    &#39;&#39;&#39;
+    # 数据准备
+    kwd = &quot;线上棋牌室&quot; # ufs返回&quot;线上棋牌室1~3&quot; 等3个词
+    wuid = &#39;AAHf/anXCgAAAAqQKVMvvQAAQwM=&#39;
+    # global conf
+    self.conf.set_exp_parameter([&#39;FLAG_random_max_kwd_num:2&#39;])
+    self.conf.set_exp_parameter([&#39;FLAG_sel_random_ratio:1&#39;])
+    # 设置ufs 返回数据
+    query_vec = self.ufs.set_query(1, kwd = kwd)
+    ufs_res = {&#39;status&#39; : 0, &#39;ufs_expids&#39; : &#39;0&#39;, &#39;query_vec&#39; : query_vec}
+    self.ufs.set_ufs2ks_res_p(ufs_res, self.debug)
+    # 设置wap_random_kwd
+    self.data.data_build(&#39;\t&#39;,&#39;wap_random_kwd_file&#39;, &#39;10&#39;,&#39;随机词1&#39;,&#39;10&#39; )
+    self.data.data_build(&#39;\t&#39;,&#39;wap_random_kwd_file&#39;, &#39;11&#39;,&#39;随机词2&#39;,&#39;10&#39; )
+    # 启动ufs
+    self.serv.start_mock_server(&#39;UFS_MOCK&#39;)
+    # 启动ks
+    assert self.serv.start_ks() == 0
+    # 发送TITAN请求
+    recv_kwd = []
+    self.titan.set_titan_req(req_type = 3, wuid = wuid, debug = self.debug)
+    for _ in range(100):
+        result = self.titan.request2ks(debug = self.debug)
+        # ks返回结果验证
+        assert_equals(result[&#39;status&#39;], 0)
+        assert_equals(result[&#39;kwd_num&#39;], 3)
+        assert_equals(result[&#39;keywords_list&#39;][0][&#39;flag&#39;], 100)
+        assert_equals(result[&#39;keywords_list&#39;][1][&#39;flag&#39;], 113)
+        assert_equals(result[&#39;keywords_list&#39;][2][&#39;flag&#39;], 113)
+</pre></div>
+
+<ul>
+<li>不同于测试描述，测试注释是指上文“#”开头的，用于说明及分割用例段落</li>
+<li>每一个描述相同功能的用例段落的前面，必须要有测试注释来说明其用途（例如数据准备、global conf配置等等）</li>
+</ul>
+<h4 id="pep8">关于pep8<a class="headerlink" href="#pep8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>大家在写case时，尽量遵守pep8书写规范（除每行长度）。在写完所有case后，可以使用用例平台的pep8调整功能来规范case，具体方法见用例平台使用说明</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bug_principle/" title="BUG规范" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                BUG规范
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../docker/" title="docker简介" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                docker简介
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
